@@ -1,0 +1,30 @@
+.gone-time-bar {
+  width: 190px;
+  height: 6px;
+  background: #4c3f5b;
+  border-radius: 4px;
+  position: relative;
+  &:after {
+    content: "";
+    width: 150px;
+    height: 6px;
+    border-radius: 4px;
+    background: #a973c1;
+    position: absolute;
+    left: 0;
+  }
+  &.red-bar {
+    background: #503941;
+    &:after {
+      background: #ff6b6b;
+      width: 132px;
+    }
+  }
+  &.blue-bar {
+    background: #324452;
+    &:after {
+      background: #5dcff4;
+      width: 100px;
+    }
+  }
+}

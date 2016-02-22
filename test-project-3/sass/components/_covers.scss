@@ -1,0 +1,129 @@
+body {
+  font:{family: 'Dosis', sans-serif;};
+
+  .app-header {
+    background: #35323d;
+
+    .text-wrapper {
+
+      .fa-at {
+        font: {size: 4.2em};
+        color: #ef5452;
+      }
+
+      .fa-angle-double-right {
+        color: #ef5452;
+        font: {size: 2em};
+      }
+
+      .block-text {
+        display: block;
+        font: {size: 1.09em;};
+        text-transform: uppercase;
+        color: #67666e;
+      }
+
+      .white-text {
+        color: #fff;
+        font: {size: 2.2em;};
+      }
+
+      .sub-text {
+        color: #67666e;
+        font: {size: 1.05em;};
+      }
+    }
+  }
+
+  .app-main {
+    @include background(linear-gradient(to right, #28222c, #40353d));
+
+    .app-posts {
+
+      .post-time {
+        color: #67666e;
+        line-height: 14px;
+        font: { size: .9em;};
+      }
+
+      .post-icon {
+        background: #3b333e;
+
+        .fa-eye-slash {
+          color: #67666e;
+          font: { size: 20px; };
+        }
+      }
+
+      .post-content {
+
+        .user-name {
+          color: #52abcd;
+        }
+
+        .user-text {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .app-sidebar {
+    @include background(linear-gradient(to left, #2c2c38, #3b3841));
+    @include box-sizing(border-box);
+    font: {family: 'Open-Sans', sans-serif;};
+    border-left: 1px solid #3e3d45;
+
+    .sidebar-header {
+      background: #53c273;
+
+      .user-name {
+        @include unstyled-link;
+        color: #fffffd;
+        font: {size: 1.1em};
+      }
+
+      .user-text {
+        color: #aaf0bc;
+        font: {size: .85em; weight: 600};
+      }
+    }
+
+    .sidebar-user-list {
+
+      .user {
+
+        .user-name {
+          color: #fffeff;
+          font: {size: 1.05em};
+        }
+
+        .gone-time {
+          color: #67666e;
+          font: {size: .8em; weight: 600};
+        }
+
+        #user-dropdown {
+
+          #user-img {
+            background: #22252c;
+          }
+
+          .dropdown-icons {
+            background: #1d2027;
+
+            a {
+              @include unstyled-link;
+              font: {size: 2.5em};
+              cursor: pointer;
+              color: #4c4d52;
+              @include transition(color, .3s, ease);
+              &:hover {
+                color: #fefefc;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
